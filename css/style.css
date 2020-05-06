@@ -34,6 +34,7 @@ button {
     border: 1px solid #d9d9d9;
     border-radius: 2px;
     font-size: 16px;
+    font-family: inherit;
     line-height: 24px;
     padding: 8px 8px 8px 35px;
     background-repeat: no-repeat;
@@ -252,7 +253,7 @@ button {
 .card-image {
     width: 100%;
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 
@@ -262,8 +263,6 @@ button {
     display: flex;
     flex-direction: column;
 }
-
-
 
 .restaurants .card-text {
     min-height: auto;
@@ -444,10 +443,29 @@ button {
     position: relative;
 }
 
+@media only screen and (max-width: 767px) {
+    .modal-dialog-auth {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .modal-dialog {
+        width: 100%;
+        padding: 15px;
+    }
+
+}
+
 .label-auth {
     position: relative;
     display: block;
     padding: 15px 30px;
+}
+
+@media only screen and (max-width: 767px) {
+    .label-auth {
+        padding: 15px 0;
+    }
 }
 
 .label-auth span {
@@ -458,8 +476,8 @@ button {
 .label-auth .login-error {
     display: none;
     position: absolute;
-    left: 30px;
-    bottom: 0;
+    right: 30px;
+    bottom: -2px;
     width: auto;
     font-size: 14px;
     color: tomato;
@@ -473,11 +491,25 @@ button {
     margin-bottom: 45px;
 }
 
+@media only screen and (max-width: 767px) {
+    .modal-header {
+        margin-bottom: 15px;
+    }
+}
+
+
 .modal-title {
     margin: 0;
     font-weight: bold;
     font-size: 36px;
     line-height: 42px;
+}
+
+@media only screen and (max-width: 767px) {
+    .modal-title {
+        font-size: 28px;
+        line-height: 30px;
+    }
 }
 
 .close {
@@ -495,7 +527,16 @@ button {
     right: 20px;
 }
 
+@media only screen and (max-width: 767px) {
+    .close-auth {
+        font-size: 28px;
+        top: -9px;
+        right: 0px;
+    }
+}
+
 .modal-body {
+    margin: 0;
     margin-bottom: 22px;
 }
 
@@ -506,6 +547,13 @@ button {
     padding-bottom: 8px;
     border-bottom: 1px solid #d9d9d9;
     margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+    .food-row {
+        margin-bottom: 10px;
+        padding-bottom: 6px;
+    }
 }
 
 .food-name {
@@ -520,6 +568,17 @@ button {
     font-weight: bold;
     font-size: 20px;
     line-height: 32px;
+}
+
+@media only screen and (max-width: 767px) {
+    .food-price {
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    .food-name {
+        font-size: 14px;
+    }
 }
 
 .food-counter {
@@ -580,7 +639,35 @@ button {
     line-height: 23px;
 }
 
-@media (max-width: 1366px) {
+@media only screen and (max-width: 767px ) {
+    .modal-dialog .modal-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .modal-pricetag {
+        align-self: flex-start;
+        margin-bottom: 10px;
+        padding: 5px 12px;
+        font-size: 14px;
+    }
+
+    .modal-dialog .button-order {
+        padding: 5px 12px;
+        font-size: 14px;
+    }
+
+    .modal-dialog .clear-cart {
+        margin-left: auto;
+        padding: 5px 12px;
+        font-size: 14px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1366px) {
     .container {
         max-width: 960px;
     }
@@ -621,7 +708,6 @@ button {
     }
 
 
-
     .pizza {
         padding: 50px;
         background-size: 500px;
@@ -642,7 +728,6 @@ button {
     .sushi {
         background-position: top 30px right -175px;
     }
-
 
 
     .promo-text {
